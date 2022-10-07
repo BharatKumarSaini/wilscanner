@@ -1,11 +1,11 @@
-package com.robinchauhan.witsdocsscanner
+package com.bharatsaini.wilscanner
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ViewManager
 
-class witsdocsscannerPackage : ReactPackage {
+class RNWilPackage : ReactPackage {
 
     override fun createViewManagers(reactContext: ReactApplicationContext):
             MutableList<ViewManager<*, *>> {
@@ -14,6 +14,6 @@ class witsdocsscannerPackage : ReactPackage {
 
     override fun createNativeModules(reactContext: ReactApplicationContext):
             MutableList<NativeModule> {
-        return mutableListOf(witsdocsscannerModule(reactContext))
+        return mutableListOf(RNWilModule(reactContext))
     }
 }

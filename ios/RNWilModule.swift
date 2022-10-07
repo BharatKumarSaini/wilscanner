@@ -1,14 +1,14 @@
 //
-//  witsdocsscannerModule.swift
-//  witsdocsscannerModule
+//  RNWilModule.swift
+//  RNWilModule
 //
-//  Copyright © 2022 Robin Chauhan. All rights reserved.
+//  Copyright © 2022 Bharat Saini. All rights reserved.
 //
 
 import Foundation
 
-@objc(witsdocsscannerModule)
-class witsdocsscannerModule: NSObject {
+@objc(RNWilModule)
+class RNWilModule: NSObject {
   @objc
   func constantsToExport() -> [AnyHashable : Any]! {
     return ["count": 1]

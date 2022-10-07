@@ -2,10 +2,10 @@
   "name": "witsdocsscanner",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/robinchauhan5000/witsscanner",
+  "homepage": "https://github.com/BharatKumarSaini/wilscanner",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "author": "Robin Chauhan <robinchauhan500@gmail.com>",
+  "author": "Bharat Saini <bharatskataria@gmail.com>",
   "license": "MIT",
   "files": [
     "android",
