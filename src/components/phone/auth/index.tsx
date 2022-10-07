@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
 import { Button, StyleSheet, TextInput } from 'react-native'
 import Snackbar from 'react-native-snackbar'
-//import {getPhoneNumber} from 'react-native-device-info';
 
 function PhoneSignIn({ navigation, refRBSheet }: any) {
   // If null, no SMS has been sent
   const [confirmationCode, setConfirm] = useState<any>(null)
   const [phoneNo, setPhoneNo] = useState('')
   const [code, setCode] = useState('')
-  const Phone = '+91'
 
   // function onAuthStateChanged(user: any) {
   //   console.log('user state changed------', user)
   // }
 
-  const Confirmed = () => {
+  const Clicked = () => {
     refRBSheet.current.close()
     navigation.navigate('Scanner')
   }
@@ -30,13 +28,13 @@ function PhoneSignIn({ navigation, refRBSheet }: any) {
   //   setConfirm(confirmation)
   // }
 
-  async function confirmCode() {
+  const confirmOTP = () => {
     console.log('code is :', code)
 
     try {
       //const test = await confirmationCode.confirm(code)
-      Confirmed()
-      console.log('this is the result     --------------------')
+      Clicked()
+      console.log('Opening Scanner')
     } catch (error) {
       Snackbar.show({
         text: 'Invalid Code',
@@ -44,10 +42,6 @@ function PhoneSignIn({ navigation, refRBSheet }: any) {
       })
     }
   }
-
-  // useEffect(async () => {
-  //  const  await getPhoneNumber();
-  // });
 
   if (!confirmationCode) {
     return (
@@ -58,7 +52,7 @@ function PhoneSignIn({ navigation, refRBSheet }: any) {
           placeholder='Enter Your Phone No.'
           value={phoneNo}
         />
-        <Button title='Send OTP' onPress={() => setConfirm('yo')} />
+        <Button title='Send OTP' onPress={() => setConfirm('pressed')} />
       </>
     )
   }
@@ -72,7 +66,7 @@ function PhoneSignIn({ navigation, refRBSheet }: any) {
         placeholder='Enter OTP'
         keyboardType='numeric'
       />
-      <Button title='Confirm OTP' onPress={() => confirmCode()} />
+      <Button title='Confirm OTP' onPress={() => confirmOTP()} />
     </>
   )
 }
