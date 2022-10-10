@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import * as React from 'react'
+import React from 'react'
 
 import Home from '../components/home'
 import Scanner from '../components/scanner/index'
